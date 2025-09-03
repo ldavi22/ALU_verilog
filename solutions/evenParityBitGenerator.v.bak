@@ -1,0 +1,16 @@
+module evenParityBitGenerator(A,B,C,D);
+
+output D;
+input A,B,C;
+
+wire w1,w2,w3,w4,w5; 
+
+not G1(w1,x);
+xor G2(w2,x,y);
+xnor G3(w3,x,y);
+and G4(w4,w3,x);
+and  G5(w5,w2,w1);
+or G6(D,w5,w4);
+
+
+endmodule
